@@ -544,7 +544,7 @@ install.Rtools <- function(choose_version = FALSE,
    }      
    
    # install Rtools!
-   URL <- paste(page_with_download_url, exe_filename, sep = '')   
+   URL <- paste(page_with_download_url, gsub('\\.exe.*', '\\.exe', exe_filename), sep = '')   
    install.URL(URL,...)   
 }
 
